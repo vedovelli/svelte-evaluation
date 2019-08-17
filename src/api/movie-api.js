@@ -5,13 +5,28 @@ export const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 export const BACKDROP_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
 export const fetchMovies = async term => {
-  const res = await http.get(`search/movie?api_key=${API_KEY}&query=${term}`);
+  const fetchURL = `search/movie?api_key=${API_KEY}&query=${term}`;
+
+  const {
+    data: { results: movies },
+  } = await http.get(fetchURL);
+
   moviesStore.set({
-    movies: res.data.results.filter(movie => movie.poster_path != null),
-    movie: {},
+    ...initialState,
+    movies,
   });
 };
 
-export const resetMovies = () => moviesStore.set(initialState);
+export const resetMovies = () => moviesStore.set({ ...initialState });
 
-export const fetchMovie = async id => http.get(`movie/${id}?api_key=${API_KEY}`);
+export const fetchMovie = async id => {
+  const fetchURL = `movie/${id}?api_key=${API_KEY}`;
+  const {
+    data: { results: movie },
+  } = await http.get(fetchURL);
+
+  moviesStore.set({
+    ...initialState,
+    movie,
+  });
+};

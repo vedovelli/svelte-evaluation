@@ -1,8 +1,8 @@
 <script>
-  import { moviesStore } from 'store/movies';
+  import { posterMovies } from 'store/movies';
   import MovieCard from '@/Movies/MovieCard.svelte';
   let movies = [];
-  moviesStore.subscribe(data => (movies = data.movies));
+  posterMovies.subscribe(data => (movies = data));
 </script>
 
 <style>
