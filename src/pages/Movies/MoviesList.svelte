@@ -1,7 +1,9 @@
 <script>
   import { posterMovies } from 'store/movies';
   import MovieCard from '@/Movies/MovieCard.svelte';
+  import MovieDetails from '@/Movies/MovieDetails.svelte';
   let movies = [];
+  let movie = {};
   posterMovies.subscribe(data => (movies = data));
 </script>
 
@@ -28,6 +30,7 @@
 </style>
 
 <ul>
+  <MovieDetails />
   {#each movies as movie}
     <li>
       <MovieCard {movie} />

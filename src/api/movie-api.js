@@ -19,14 +19,20 @@ export const fetchMovies = async term => {
 
 export const resetMovies = () => moviesStore.set({ ...initialState });
 
+export const resetMovie = () => {
+  moviesStore.update(store => ({
+    ...store,
+    movie: {},
+  }));
+};
+
 export const fetchMovie = async id => {
   const fetchURL = `movie/${id}?api_key=${API_KEY}`;
-  const {
-    data: { results: movie },
-  } = await http.get(fetchURL);
 
-  moviesStore.set({
-    ...initialState,
+  const { data: movie } = await http.get(fetchURL);
+
+  moviesStore.update(store => ({
+    ...store,
     movie,
-  });
+  }));
 };

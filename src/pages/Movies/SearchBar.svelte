@@ -1,7 +1,7 @@
 <script>
   import { fetchMovies, resetMovies } from 'api/movie-api';
 
-  let term = '';
+  let term = 'Pulp';
 
   const reset = e => {
     e.preventDefault();
@@ -15,6 +15,13 @@
     fetchMovies(term);
   };
 </script>
+
+<style>
+  .navbar {
+    z-index: 1;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+  }
+</style>
 
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="/">Movie Search</a>
