@@ -1,7 +1,7 @@
 <script>
   import { fetchMovies, resetMovies } from 'api/movie-api';
 
-  let term = 'Pulp';
+  let term = '';
 
   const reset = e => {
     e.preventDefault();
