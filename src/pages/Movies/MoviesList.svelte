@@ -29,8 +29,8 @@
   }
 </style>
 
+<MovieDetails />
 <ul>
-  <MovieDetails />
   {#each movies as movie}
     <li>
       <MovieCard {movie} />

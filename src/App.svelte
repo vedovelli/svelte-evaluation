@@ -4,6 +4,4 @@
 </script>
 
 <SearchBar />
-<div class="container">
-  <MoviesList />
-</div>
+<MoviesList />

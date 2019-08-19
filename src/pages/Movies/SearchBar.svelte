@@ -6,6 +6,7 @@
   const reset = e => {
     e.preventDefault();
     term = '';
+    document.getElementById('search-input').focus();
     resetMovies();
   };
 
@@ -26,7 +27,10 @@
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="/">Movie Search</a>
   <form class="form-inline" on:submit={submitHandler}>
+    <!-- svelte-ignore a11y-autofocus -->
     <input
+      autofocus
+      id="search-input"
       class="form-control mr-sm-2"
       type="search"
       placeholder="Search"

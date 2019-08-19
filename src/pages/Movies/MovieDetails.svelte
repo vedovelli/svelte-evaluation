@@ -13,12 +13,13 @@
   .movie-details {
     z-index: 0;
     width: 100%;
+    min-height: 300px;
     background-position: center;
+    background-size: cover;
     background-color: #000;
     color: #f4f4f4;
     text-shadow: 1px 1px 1px #000;
     padding: 20px;
-    margin: 0 6px 20px;
   }
 
   .controls {
