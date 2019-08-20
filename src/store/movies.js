@@ -3,6 +3,7 @@ import { writable, derived } from 'svelte/store';
 export const initialState = {
   movies: [],
   movie: {},
+  touched: false,
 };
 
 export const moviesStore = writable(initialState);

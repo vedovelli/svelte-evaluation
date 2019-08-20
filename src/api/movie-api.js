@@ -14,16 +14,8 @@ export const fetchMovies = async term => {
   moviesStore.set({
     ...initialState,
     movies,
+    touched: true,
   });
-};
-
-export const resetMovies = () => moviesStore.set({ ...initialState });
-
-export const resetMovie = () => {
-  moviesStore.update(store => ({
-    ...store,
-    movie: {},
-  }));
 };
 
 export const fetchMovie = async id => {
@@ -34,5 +26,14 @@ export const fetchMovie = async id => {
   moviesStore.update(store => ({
     ...store,
     movie,
+  }));
+};
+
+export const resetMovies = () => moviesStore.set({ ...initialState });
+
+export const resetMovie = () => {
+  moviesStore.update(store => ({
+    ...store,
+    movie: {},
   }));
 };
