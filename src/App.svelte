@@ -5,4 +5,3 @@
 
 <SearchBar />
 <MoviesList />
-<h1>Test</h1>
