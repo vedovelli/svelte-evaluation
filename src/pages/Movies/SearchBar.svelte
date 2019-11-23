@@ -33,7 +33,7 @@
       id="search-input"
       class="form-control mr-sm-2"
       type="search"
-      placeholder="Buscar"
+      placeholder="Buscar XXX"
       aria-label="Search"
       bind:value={term} />
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
