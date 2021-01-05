@@ -13,7 +13,7 @@
     "svelte": "^3.20.0"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "sirv-cli": "^0.4.5",
     "svelte-easyroute-rollup": "^1.1.0"
   },
